@@ -1,0 +1,63 @@
+{
+  "name": "pelias-polyline",
+  "author": "mapzen",
+  "version": "0.0.0-development",
+  "description": "Pelias polyline importer",
+  "homepage": "https://github.com/mapzen/pelias-polyline",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "start": "./bin/start",
+    "dry-run": "node bin/cli.js --config --pretty",
+    "test": "./bin/test",
+    "ci": "npm test",
+    "lint": "jshint .",
+    "validate": "npm ls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pelias/polylines.git"
+  },
+  "keywords": [
+    "pelias",
+    "stream",
+    "polyline",
+    "openstreetmap"
+  ],
+  "bugs": {
+    "url": "https://github.com/mapzen/pelias-polylines/issues"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "dependencies": {
+    "@mapbox/geojson-extent": "^0.3.2",
+    "@mapbox/polyline": "^1.1.0",
+    "@turf/along": "^6.0.1",
+    "@turf/length": "^6.0.2",
+    "lodash": "^4.17.4",
+    "minimist": "^1.2.0",
+    "pelias-config": "^4.12.0",
+    "pelias-dbclient": "^2.13.0",
+    "pelias-logger": "^1.2.1",
+    "pelias-model": "^9.2.0",
+    "pelias-wof-admin-lookup": "^7.8.0",
+    "split2": "^3.1.1",
+    "through2": "^3.0.0"
+  },
+  "devDependencies": {
+    "jshint": "^2.9.2",
+    "precommit-hook": "^3.0.0",
+    "proxyquire": "^2.0.0",
+    "tap-spec": "^5.0.0",
+    "tape": "^5.0.0"
+  },
+  "pre-commit": [
+    "lint",
+    "test"
+  ],
+  "release": {
+    "branch": "master",
+    "success": []
+  }
+}

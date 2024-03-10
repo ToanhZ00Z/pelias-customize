@@ -1,0 +1,67 @@
+{
+  "name": "pelias-interpolation",
+  "version": "0.0.0-development",
+  "description": "street address interpolation service",
+  "homepage": "https://github.com/pelias/interpolation",
+  "author": "mapzen",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run units",
+    "funcs": "./bin/funcs",
+    "units": "./bin/units",
+    "ci": "npm test && npm run funcs",
+    "lint": "jshint .",
+    "validate": "npm ls",
+    "download-tiger": "./bin/download-tiger",
+    "build": "./script/build.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pelias/interpolation.git"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "dependencies": {
+    "@mapbox/polyline": "^1.0.0",
+    "async": "^3.1.0",
+    "better-sqlite3": "^7.4.3",
+    "cheerio": "^1.0.0-rc.3",
+    "cli-table3": "^0.6.0",
+    "csv-parse": "^4.4.6",
+    "express": "^4.14.0",
+    "from2": "^2.3.0",
+    "jsftp": "^2.0.0",
+    "lodash": "^4.17.4",
+    "morgan": "^1.9.0",
+    "node-postal": "^1.1.2",
+    "pbf2json": "^6.4.0",
+    "pelias-config": "^4.0.0",
+    "pelias-logger": "^1.2.1",
+    "quadtree": "^1.1.3",
+    "require-dir": "^1.0.0",
+    "serve-index": "^1.8.0",
+    "split2": "^3.0.0",
+    "superagent": "^5.1.0",
+    "through2": "^3.0.0",
+    "through2-batch": "^1.0.1"
+  },
+  "devDependencies": {
+    "jshint": "^2.9.3",
+    "precommit-hook": "^3.0.0",
+    "proxyquire": "^2.0.0",
+    "tap-dot": "^2.0.0",
+    "tap-spec": "^5.0.0",
+    "tape": "^5.0.0"
+  },
+  "pre-commit": [
+    "lint",
+    "validate",
+    "test"
+  ],
+  "release": {
+    "branch": "master",
+    "success": []
+  }
+}

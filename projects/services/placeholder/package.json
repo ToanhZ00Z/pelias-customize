@@ -1,0 +1,67 @@
+{
+  "name": "pelias-placeholder",
+  "version": "0.0.0-development",
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "author": "mapzen",
+  "license": "MIT",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm run units",
+    "units": "./cmd/units",
+    "integration": "./cmd/integration",
+    "funcs": "for case in test/cases/*.txt; do node test/case.js $case; done",
+    "all": "npm run units && npm run integration && npm run funcs",
+    "start": "./cmd/server.sh",
+    "extract": "bash ./cmd/extract.sh",
+    "build": "bash ./cmd/build.sh",
+    "gentests": "cat data/wof.extract | node cmd/generate_tests.js > test/cases/generated.txt",
+    "repl": "node cmd/repl.js",
+    "cli": "node cmd/cli.js",
+    "lint": "jshint .",
+    "validate": "npm ls",
+    "ci": "./cmd/ci.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pelias/placeholder.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pelias/placeholder/issues"
+  },
+  "homepage": "https://github.com/pelias/placeholder#readme",
+  "dependencies": {
+    "async": "^3.0.1",
+    "better-sqlite3": "^8.5.0",
+    "express": "^4.15.2",
+    "lodash": "^4.17.21",
+    "lower-case": "^2.0.0",
+    "morgan": "^1.9.0",
+    "pelias-blacklist-stream": "^1.1.0",
+    "pelias-config": "^4.5.0",
+    "pelias-logger": "^1.2.1",
+    "pelias-whosonfirst": "^5.0.0",
+    "regenerate": "^1.4.2",
+    "remove-accents-diacritics": "^1.0.2",
+    "require-dir": "^1.0.0",
+    "sorted-intersect": "^0.1.4",
+    "split2": "^3.0.0",
+    "through2": "^3.0.0"
+  },
+  "devDependencies": {
+    "jshint": "^2.5.6",
+    "precommit-hook": "^3.0.0",
+    "tap-spec": "^5.0.0",
+    "tape": "^5.0.0"
+  },
+  "pre-commit": [
+    "lint",
+    "validate",
+    "test"
+  ],
+  "release": {
+    "branch": "master",
+    "success": []
+  }
+}

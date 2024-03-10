@@ -1,0 +1,615 @@
+[
+  {
+    "_index": "pelias",
+    "_id": "openaddresses:address:input_file_1:7552fdd1d9eb5765",
+    "_type": "_doc",
+    "data": {
+      "name": {
+        "default": "100 Main St"
+      },
+      "phrase": {
+        "default": "100 Main St"
+      },
+      "parent": {
+        "country": [
+          "override country"
+        ],
+        "country_id": [
+          "1"
+        ],
+        "country_a": [
+          null
+        ],
+        "country_source": [
+          null
+        ],
+        "macroregion": [
+          "override macroregion"
+        ],
+        "macroregion_id": [
+          "2"
+        ],
+        "macroregion_a": [
+          null
+        ],
+        "macroregion_source": [
+          null
+        ],
+        "region": [
+          "override region"
+        ],
+        "region_id": [
+          "3"
+        ],
+        "region_a": [
+          null
+        ],
+        "region_source": [
+          null
+        ],
+        "macrocounty": [
+          "override macrocounty"
+        ],
+        "macrocounty_id": [
+          "4"
+        ],
+        "macrocounty_a": [
+          null
+        ],
+        "macrocounty_source": [
+          null
+        ],
+        "county": [
+          "override county"
+        ],
+        "county_id": [
+          "5"
+        ],
+        "county_a": [
+          null
+        ],
+        "county_source": [
+          null
+        ],
+        "borough": [
+          "override borough"
+        ],
+        "borough_id": [
+          "6"
+        ],
+        "borough_a": [
+          null
+        ],
+        "borough_source": [
+          null
+        ],
+        "locality": [
+          "override locality"
+        ],
+        "locality_id": [
+          "7"
+        ],
+        "locality_a": [
+          null
+        ],
+        "locality_source": [
+          null
+        ],
+        "localadmin": [
+          "override localadmin"
+        ],
+        "localadmin_id": [
+          "8"
+        ],
+        "localadmin_a": [
+          null
+        ],
+        "localadmin_source": [
+          null
+        ],
+        "neighbourhood": [
+          "override neighbourhood"
+        ],
+        "neighbourhood_id": [
+          "9"
+        ],
+        "neighbourhood_a": [
+          null
+        ],
+        "neighbourhood_source": [
+          null
+        ]
+      },
+      "address_parts": {
+        "number": "100",
+        "street": "Main St",
+        "zip": "input postcode"
+      },
+      "center_point": {
+        "lon": 21.212121,
+        "lat": 12.121212
+      },
+      "source": "openaddresses",
+      "layer": "address",
+      "source_id": "input_file_1:7552fdd1d9eb5765"
+    }
+  },
+  {
+    "_index": "pelias",
+    "_id": "openaddresses:address:input_file_1:e21716b47966b98a",
+    "_type": "_doc",
+    "data": {
+      "name": {
+        "default": "200 Main St"
+      },
+      "phrase": {
+        "default": "200 Main St"
+      },
+      "address_parts": {
+        "number": "200",
+        "street": "Main St"
+      },
+      "center_point": {
+        "lon": 31.313131,
+        "lat": 13.131313
+      },
+      "source": "openaddresses",
+      "layer": "address",
+      "source_id": "input_file_1:e21716b47966b98a"
+    }
+  },
+  {
+    "_index": "pelias",
+    "_id": "openaddresses:address:input_file_1:7456321cc7d6d352",
+    "_type": "_doc",
+    "data": {
+      "name": {
+        "default": "0 Main St"
+      },
+      "phrase": {
+        "default": "0 Main St"
+      },
+      "address_parts": {
+        "number": "0",
+        "street": "Main St"
+      },
+      "center_point": {
+        "lon": 41.414141,
+        "lat": 14.141414
+      },
+      "source": "openaddresses",
+      "layer": "address",
+      "source_id": "input_file_1:7456321cc7d6d352"
+    }
+  },
+  {
+    "_index": "pelias",
+    "_id": "openaddresses:address:input_file_1:f026cd5494a7e4f4",
+    "_type": "_doc",
+    "data": {
+      "name": {
+        "default": "00 Elm St"
+      },
+      "phrase": {
+        "default": "00 Elm St"
+      },
+      "address_parts": {
+        "number": "00",
+        "street": "Elm St"
+      },
+      "center_point": {
+        "lon": 51.515151,
+        "lat": 15.151515
+      },
+      "source": "openaddresses",
+      "layer": "address",
+      "source_id": "input_file_1:f026cd5494a7e4f4"
+    }
+  },
+  {
+    "_index": "pelias",
+    "_id": "openaddresses:address:input_file_1:4509c0194f1efaca",
+    "_type": "_doc",
+    "data": {
+      "name": {
+        "default": "00300 Main St"
+      },
+      "phrase": {
+        "default": "00300 Main St"
+      },
+      "address_parts": {
+        "number": "00300",
+        "street": "Main St"
+      },
+      "center_point": {
+        "lon": 61.616161,
+        "lat": 16.161616
+      },
+      "source": "openaddresses",
+      "layer": "address",
+      "source_id": "input_file_1:4509c0194f1efaca"
+    }
+  },
+  {
+    "_index": "pelias",
+    "_id": "openaddresses:address:input_file_2:fc6d8b0a0e5cda70",
+    "_type": "_doc",
+    "data": {
+      "name": {
+        "default": "400 Vireo Rd"
+      },
+      "phrase": {
+        "default": "400 Vireo Rd"
+      },
+      "address_parts": {
+        "number": "400",
+        "street": "Vireo Rd"
+      },
+      "center_point": {
+        "lon": 71.717171,
+        "lat": 17.171717
+      },
+      "source": "openaddresses",
+      "layer": "address",
+      "source_id": "input_file_2:fc6d8b0a0e5cda70"
+    }
+  },
+  {
+    "_index": "pelias",
+    "_id": "openaddresses:address:input_file_2:b7c25b5e6eea7831",
+    "_type": "_doc",
+    "data": {
+      "name": {
+        "default": "00000 Vireo Rd"
+      },
+      "phrase": {
+        "default": "00000 Vireo Rd"
+      },
+      "address_parts": {
+        "number": "00000",
+        "street": "Vireo Rd"
+      },
+      "center_point": {
+        "lon": 81.818181,
+        "lat": 18.181818
+      },
+      "source": "openaddresses",
+      "layer": "address",
+      "source_id": "input_file_2:b7c25b5e6eea7831"
+    }
+  },
+  {
+    "_index": "pelias",
+    "_id": "openaddresses:address:input_file_2:25d52af880bfefc4",
+    "_type": "_doc",
+    "data": {
+      "name": {
+        "default": "00500 Calle De Lago"
+      },
+      "phrase": {
+        "default": "00500 Calle De Lago"
+      },
+      "address_parts": {
+        "number": "00500",
+        "street": "Calle De Lago"
+      },
+      "center_point": {
+        "lon": 91.919191,
+        "lat": 19.191919
+      },
+      "source": "openaddresses",
+      "layer": "address",
+      "source_id": "input_file_2:25d52af880bfefc4"
+    }
+  },
+  {
+    "_index": "pelias",
+    "_id": "openaddresses:address:input_file_2:0d9cb0ba093a3d23",
+    "_type": "_doc",
+    "data": {
+      "name": {
+        "default": "00500 Calle De Lago"
+      },
+      "phrase": {
+        "default": "00500 Calle De Lago"
+      },
+      "address_parts": {
+        "number": "00500",
+        "street": "Calle De Lago"
+      },
+      "center_point": {
+        "lon": 92.929292,
+        "lat": 29.292929
+      },
+      "source": "openaddresses",
+      "layer": "address",
+      "source_id": "input_file_2:0d9cb0ba093a3d23"
+    }
+  },
+  {
+    "_index": "pelias",
+    "_id": "openaddresses:address:au/input_file_3:0c0641950f5693a0",
+    "_type": "_doc",
+    "data": {
+      "name": {
+        "default": "10 Smith Street"
+      },
+      "phrase": {
+        "default": "10 Smith Street"
+      },
+      "address_parts": {
+        "number": "10",
+        "street": "Smith Street",
+        "zip": "input postcode"
+      },
+      "center_point": {
+        "lon": 144.931874,
+        "lat": -37.791488
+      },
+      "source": "openaddresses",
+      "layer": "address",
+      "source_id": "au/input_file_3:0c0641950f5693a0",
+      "addendum": {
+        "concordances": "{\"gnaf:pid\":\"GAVIC718519668\"}"
+      }
+    }
+  },
+  {
+    "_index": "pelias",
+    "_id": "openaddresses:address:au/input_file_4:2e7dc83e6d7c43b5",
+    "_type": "_doc",
+    "data": {
+      "name": {
+        "default": "244 Barkly Street"
+      },
+      "phrase": {
+        "default": "244 Barkly Street"
+      },
+      "address_parts": {
+        "number": "244",
+        "street": "Barkly Street",
+        "zip": "3182",
+        "unit": "10"
+      },
+      "center_point": {
+        "lon": 144.980414,
+        "lat": -37.872398
+      },
+      "source": "openaddresses",
+      "layer": "address",
+      "source_id": "au/input_file_4:2e7dc83e6d7c43b5"
+    }
+  },
+  {
+    "_index": "pelias",
+    "_id": "openaddresses:address:au/input_file_4:b9d4e479b3787466",
+    "_type": "_doc",
+    "data": {
+      "name": {
+        "default": "10/244-246 Wattletree Road"
+      },
+      "phrase": {
+        "default": "10/244-246 Wattletree Road"
+      },
+      "address_parts": {
+        "number": "10/244-246",
+        "street": "Wattletree Road",
+        "zip": "3144"
+      },
+      "center_point": {
+        "lon": 145.037872,
+        "lat": -37.863785
+      },
+      "source": "openaddresses",
+      "layer": "address",
+      "source_id": "au/input_file_4:b9d4e479b3787466"
+    }
+  },
+  {
+    "_index": "pelias",
+    "_id": "openaddresses:address:au/input_file_4:5d465daf4228aeae",
+    "_type": "_doc",
+    "data": {
+      "name": {
+        "default": "10/244-246 Mary Street"
+      },
+      "phrase": {
+        "default": "10/244-246 Mary Street"
+      },
+      "address_parts": {
+        "number": "10/244-246",
+        "street": "Mary Street",
+        "zip": "3121"
+      },
+      "center_point": {
+        "lon": 145.000381,
+        "lat": -37.82896
+      },
+      "source": "openaddresses",
+      "layer": "address",
+      "source_id": "au/input_file_4:5d465daf4228aeae"
+    }
+  },
+  {
+    "_index": "pelias",
+    "_id": "openaddresses:address:au/input_file_4:19c92a8fab88d851",
+    "_type": "_doc",
+    "data": {
+      "name": {
+        "default": "244 Brunswick Street"
+      },
+      "phrase": {
+        "default": "244 Brunswick Street"
+      },
+      "address_parts": {
+        "number": "244",
+        "street": "Brunswick Street",
+        "zip": "3065",
+        "unit": "10"
+      },
+      "center_point": {
+        "lon": 144.978361,
+        "lat": -37.80025
+      },
+      "source": "openaddresses",
+      "layer": "address",
+      "source_id": "au/input_file_4:19c92a8fab88d851"
+    }
+  },
+  {
+    "_index": "pelias",
+    "_id": "openaddresses:address:au/input_file_4:2d93ffa5b82d5815",
+    "_type": "_doc",
+    "data": {
+      "name": {
+        "default": "244 Dorcas Street"
+      },
+      "phrase": {
+        "default": "244 Dorcas Street"
+      },
+      "address_parts": {
+        "number": "244",
+        "street": "Dorcas Street",
+        "zip": "3205",
+        "unit": "110"
+      },
+      "center_point": {
+        "lon": 144.959162,
+        "lat": -37.83319
+      },
+      "source": "openaddresses",
+      "layer": "address",
+      "source_id": "au/input_file_4:2d93ffa5b82d5815"
+    }
+  },
+  {
+    "_index": "pelias",
+    "_id": "openaddresses:address:au/input_file_4:a6e27ffafd14a0da",
+    "_type": "_doc",
+    "data": {
+      "name": {
+        "default": "244 Dorcas Street"
+      },
+      "phrase": {
+        "default": "244 Dorcas Street"
+      },
+      "address_parts": {
+        "number": "244",
+        "street": "Dorcas Street",
+        "zip": "3205",
+        "unit": "210"
+      },
+      "center_point": {
+        "lon": 144.959162,
+        "lat": -37.83319
+      },
+      "source": "openaddresses",
+      "layer": "address",
+      "source_id": "au/input_file_4:a6e27ffafd14a0da"
+    }
+  },
+  {
+    "_index": "pelias",
+    "_id": "openaddresses:address:au/input_file_4:4c18bc2fab1af1ee",
+    "_type": "_doc",
+    "data": {
+      "name": {
+        "default": "244 Dorcas Street"
+      },
+      "phrase": {
+        "default": "244 Dorcas Street"
+      },
+      "address_parts": {
+        "number": "244",
+        "street": "Dorcas Street",
+        "zip": "3205",
+        "unit": "310"
+      },
+      "center_point": {
+        "lon": 144.959162,
+        "lat": -37.83319
+      },
+      "source": "openaddresses",
+      "layer": "address",
+      "source_id": "au/input_file_4:4c18bc2fab1af1ee"
+    }
+  },
+  {
+    "_index": "pelias",
+    "_id": "openaddresses:address:au/input_file_4:d5236248ba736eba",
+    "_type": "_doc",
+    "data": {
+      "name": {
+        "default": "244 Dorcas Street"
+      },
+      "phrase": {
+        "default": "244 Dorcas Street"
+      },
+      "address_parts": {
+        "number": "244",
+        "street": "Dorcas Street",
+        "zip": "3205",
+        "unit": "410"
+      },
+      "center_point": {
+        "lon": 144.959162,
+        "lat": -37.83319
+      },
+      "source": "openaddresses",
+      "layer": "address",
+      "source_id": "au/input_file_4:d5236248ba736eba"
+    }
+  },
+  {
+    "_index": "pelias",
+    "_id": "openaddresses:address:au/input_file_4:7dbcebf7bd632ef8",
+    "_type": "_doc",
+    "data": {
+      "name": {
+        "default": "244 Dorcas Street"
+      },
+      "phrase": {
+        "default": "244 Dorcas Street"
+      },
+      "address_parts": {
+        "number": "244",
+        "street": "Dorcas Street",
+        "zip": "3205",
+        "unit": "510"
+      },
+      "center_point": {
+        "lon": 144.959162,
+        "lat": -37.83319
+      },
+      "source": "openaddresses",
+      "layer": "address",
+      "source_id": "au/input_file_4:7dbcebf7bd632ef8"
+    }
+  },
+  {
+    "_index": "pelias",
+    "_id": "openaddresses:address:au/input_file_4:822280a9b8a92d85",
+    "_type": "_doc",
+    "data": {
+      "name": {
+        "default": "244 Pascoe Vale Road"
+      },
+      "phrase": {
+        "default": "244 Pascoe Vale Road"
+      },
+      "address_parts": {
+        "number": "244",
+        "street": "Pascoe Vale Road",
+        "zip": "3040",
+        "unit": "10"
+      },
+      "center_point": {
+        "lon": 144.925714,
+        "lat": -37.751689
+      },
+      "source": "openaddresses",
+      "layer": "address",
+      "source_id": "au/input_file_4:822280a9b8a92d85"
+    }
+  }
+]
