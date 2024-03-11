@@ -80,6 +80,10 @@
     "geonames": {
     },
     "openaddresses": {
+      "datapath": "/data/openaddresses",
+      "files": [
+        "us/or/portland_metro.csv"
+      ]
     },
     "polyline": {
       "datapath": "/data/polylines"
