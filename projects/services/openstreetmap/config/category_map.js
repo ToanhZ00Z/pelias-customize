@@ -26,7 +26,7 @@ const mapping = {
   'aeroway': {
     '*':                        ['transport','transport:air'],
     'aerodrome':                ['transport','transport:air','transport:air:aerodrome'],
-    'international':            ['transport','transport:air','transport:air:airport']
+    'international':            ['transport','transport:air','transport:air:airport','airport']
   },
 
   'amenity': {
@@ -38,19 +38,19 @@ const mapping = {
     'place_of_worship':         ['religion'],
 
     'arts_centre':              ['education','entertainment'],
-    'community_centre':         ['education','entertainment'],
+    'community_centre':         ['education','entertainment','community_centre'],
     'social_centre':            ['education','entertainment'],
-    'library':                  ['education','entertainment'],
+    'library':                  ['education','entertainment','library'],
     'planetarium':              ['education','entertainment'],
-    'theatre':                  ['education','entertainment'],
+    'theatre':                  ['education','entertainment','theatre'],
     'college':                  ['education'],
-    'kindergarten':             ['education'],
-    'school':                   ['education'],
+    'kindergarten':             ['education','kindergarten'],
+    'school':                   ['education','school'],
     'university':               ['education'],
 
-    'bar':                      ['nightlife'],
+    'bar':                      ['nightlife','bar'],
     'biergarten':               ['nightlife','food'],
-    'cinema':                   ['entertainment','nightlife'],
+    'cinema':                   ['entertainment','nightlife','cinema'],
     'casino':                   ['nightlife'],
     'gambling':                 ['nightlife'],
     'nightclub':                ['nightlife'],
@@ -58,48 +58,48 @@ const mapping = {
 
     'courthouse':               ['government'],
     'embassy':                  ['government'],
-    'fire_station':             ['government'],
-    'police':                   ['government'],
-    'post_office':              ['government'],
-    'ranger_station':           ['government','recreation'],
+    'fire_station':             ['government','station','fire_station'],
+    'police':                   ['government','police'],
+    'post_office':              ['government','post_office','post_box'],
+    'ranger_station':           ['government','recreation','station'],
     'register_office':          ['government'],
     'townhall':                 ['government'],
 
     'coworking_space':          ['professional'],
 
     'atm':                      ['finance'],
-    'bank':                     ['finance','professional'],
+    'bank':                     ['finance','professional','bank'],
     'bureau_de_change':         ['finance','professional'],
 
-    'clinic':                   ['health'],
-    'dentist':                  ['health'],
-    'doctors':                  ['health'],
-    'hospital':                 ['health'],
-    'nursing_home':             ['health'],
-    'pharmacy':                 ['health'],
-    'social_facility':          ['health'],
+    'clinic':                   ['health','health_other'],
+    'dentist':                  ['health','health_dentist'],
+    'doctors':                  ['health','health_doctors'],
+    'hospital':                 ['health','hospital','health_hospital'],
+    'nursing_home':             ['health','health_other'],
+    'pharmacy':                 ['health','pharmacy','health_pharmacy'],
+    'social_facility':          ['health','health_other'],
     'veterinary':               ['professional'],
 
     'cafe':                     ['food','retail'],
-    'fast_food':                ['food','retail'],
+    'fast_food':                ['food','retail','fast_food'],
     'food_court':               ['food','retail'],
     'ice_cream':                ['food','retail'],
-    'marketplace':              ['food','retail'],
-    'restaurant':               ['food','retail','nightlife'],
+    'marketplace':              ['food','retail','marketplace'],
+    'restaurant':               ['food','retail','nightlife','restaurant'],
 
-    'bus_station':              ['transport','transport:public','transport:bus'],
+    'bus_station':              ['transport','transport:public','transport:bus','station','bus_stop','bus_station','public_transport_station'],
     'taxi':                     ['transport','transport:taxi'],
 
-    'car_rental':               ['transport','professional'],
-    'car_wash':                 ['professional'],
-    'charging_station':         ['transport','professional'],
-    'fuel':                     ['transport','professional'],
+    'car_rental':               ['transport','professional','shop_car'],
+    'car_wash':                 ['professional','shop_car'],
+    'charging_station':         ['transport','professional','station','charging_station'],
+    'fuel':                     ['transport','professional','fuel'],
 
     'ferry_terminal':           ['transport','transport:sea']
   },
 
   'building': {
-    'hotel':                    ['accommodation'],
+    'hotel':                    ['accommodation','hotel'],
     'commercial':               ['professional'],
     'retail':                   ['retail'],
 
@@ -111,16 +111,16 @@ const mapping = {
     'shrine':                   ['religion'],
 
     'civic':                    ['government'],
-    'hospital':                 ['health'],
-    'school':                   ['education'],
-    'stadium':                  ['entertainment'],
-    'university':               ['education'],
-    'public':                   ['government'],
+    'hospital':                 ['health','hospital'],
+    'school':                   ['education','school'],
+    'stadium':                  ['entertainment','stadium'],
+    'university':               ['education','university'],
+    'public':                   ['government','administrative'],
 
     'farm':                     ['industry','industry:agriculture'],
 
-    'train_station':            ['transport','transport:station'],
-    'transportation':           ['transport','transport:station']
+    'train_station':            ['transport','transport:station','station'],
+    'transportation':           ['transport','transport:station','station']
   },
 
   // experimental, import cuisines for food-related venues
@@ -131,13 +131,13 @@ const mapping = {
     'bagel':                    ['food:bagel'],
     'barbecue':                 ['food:barbecue'],
     'bougatsa':                 ['food:bougatsa'],
-    'burger':                   ['food:burger'],
+    'burger':                   ['food_burger'],
     'burrito':                  ['food:burrito'],
     'cake':                     ['food:cake'],
     'casserole':                ['food:casserole'],
     'chicken':                  ['food:chicken'],
     'coffee_shop':              ['food:coffee_shop'],
-    'crepe':                    ['food:crepe'],
+    'crepe':                    ['food_crepe'],
     'couscous':                 ['food:couscous'],
     'curry':                    ['food:curry'],
     'dessert':                  ['food:dessert'],
@@ -149,19 +149,19 @@ const mapping = {
     'fried_food':               ['food:fried_food'],
     'friture':                  ['food:friture'],
     'gyro':                     ['food:gyro'],
-    'ice_cream':                ['food:ice_cream'],
-    'kebab':                    ['food:kebab'],
+    'ice_cream':                ['food:ice_cream','amenity_ice_cream'],
+    'kebab':                    ['food_kebab'],
     'mediterranean':            ['food:mediterranean'],
     'noodle':                   ['food:noodle'],
     'pancake':                  ['food:pancake'],
     'pasta':                    ['food:pasta'],
     'pie':                      ['food:pie'],
-    'pizza':                    ['food:pizza'],
+    'pizza':                    ['food_pizza'],
     'regional':                 ['food:regional'],
-    'sandwich':                 ['food:sandwich'],
+    'sandwich':                 ['food_sandwich'],
     'sausage':                  ['food:sausage'],
     'savory_pancakes':          ['food:savory_pancakes'],
-    'seafood':                  ['food:seafood'],
+    'seafood':                  ['food:seafood','shop_seafood'],
     'steak_house':              ['food:steak'],
     'sub':                      ['food:sub'],
     'sushi':                    ['food:sushi'],
@@ -175,7 +175,7 @@ const mapping = {
     'american':                 ['food:cuisine:american'],
     'arab':                     ['food:cuisine:arab'],
     'argentinian':              ['food:cuisine:argentinian'],
-    'asian':                    ['food:cuisine:asian'],
+    'asian':                    ['food_asian'],
     'australian':               ['food:cuisine:australian'],
     'baiana':                   ['food:cuisine:baiana'],
     'balkan':                   ['food:cuisine:balkan'],
@@ -186,11 +186,11 @@ const mapping = {
     'cantonese':                ['food:cuisine:cantonese'],
     'capixaba':                 ['food:cuisine:capixaba'],
     'caribbean':                ['food:cuisine:caribbean'],
-    'chinese':                  ['food:cuisine:chinese'],
+    'chinese':                  ['food_chinese'],
     'croatian':                 ['food:cuisine:croatian'],
     'czech':                    ['food:cuisine:czech'],
     'danish':                   ['food:cuisine:danish'],
-    'french':                   ['food:cuisine:french'],
+    'french':                   ['food_french'],
     'gaucho':                   ['food:cuisine:gaucho'],
     'german':                   ['food:cuisine:german'],
     'greek':                    ['food:cuisine:greek'],
@@ -199,12 +199,12 @@ const mapping = {
     'indian':                   ['food:cuisine:indian'],
     'international':            ['food:cuisine:international'],
     'iranian':                  ['food:cuisine:iranian'],
-    'italian':                  ['food:cuisine:italian'],
-    'japanese':                 ['food:cuisine:japanese'],
-    'korean':                   ['food:cuisine:korean'],
+    'italian':                  ['food_italian'],
+    'japanese':                 ['food_japanese'],
+    'korean':                   ['food_korean'],
     'kyo_ryouri':               ['food:cuisine:kyo_ryouri'],
     'latin_american':           ['food:cuisine:latin_american'],
-    'lebanese':                 ['food:cuisine:lebanese'],
+    'lebanese':                 ['food_lebanese'],
     'malagasy':                 ['food:cuisine:malagasy'],
     'mexican':                  ['food:cuisine:mexican'],
     'mineira':                  ['food:cuisine:mineira'],
@@ -218,9 +218,9 @@ const mapping = {
     'shandong':                 ['food:cuisine:shandong'],
     'sichuan':                  ['food:cuisine:sichuan'],
     'spanish':                  ['food:cuisine:spanish'],
-    'thai':                     ['food:cuisine:thai'],
+    'thai':                     ['food_thai'],
     'turkish':                  ['food:cuisine:turkish'],
-    'vietnamese':               ['food:cuisine:vietnamese'],
+    'vietnamese':               ['food_vietnamese'],
     'westphalian':              ['food:cuisine:westphalian']
   },
 
@@ -229,12 +229,12 @@ const mapping = {
   },
 
   'emergency': {
-    'ambulance_station':        ['health','government']
+    'ambulance_station':        ['health','government','station']
   },
 
   'historic': {
-    'archaeological_site':      ['education'],
-    'monument':                 ['education']
+    'archaeological_site':      ['education','historic'],
+    'monument':                 ['education','historic']
   },
 
   'leisure': {
@@ -244,22 +244,22 @@ const mapping = {
     'bandstand':                ['entertainment'],
     'dance':                    ['nightlife'],
 
-    'dog_park':                 ['recreation'],
+    'dog_park':                 ['recreation','park'],
     'fishing':                  ['recreation'],
     'garden':                   ['recreation'],
-    'golf_course':              ['recreation','entertainment'],
+    'golf_course':              ['recreation','entertainment','sport_golf'],
     'ice_rink':                 ['entertainment'],
-    'miniature_golf':           ['entertainment'],
+    'miniature_golf':           ['entertainment','sport_golf'],
     'nature_reserve':           ['recreation'],
-    'park':                     ['recreation'],
-    'pitch':                    ['recreation','entertainment'],
-    'playground':               ['recreation'],
-    'sports_centre':            ['recreation','education','entertainment'],
-    'stadium':                  ['entertainment'],
+    'park':                     ['recreation','park'],
+    'pitch':                    ['recreation','entertainment','pitch'],
+    'playground':               ['recreation','playground'],
+    'sports_centre':            ['recreation','education','entertainment','sports_centre'],
+    'stadium':                  ['entertainment','stadium'],
     'summer_camp':              ['recreation','education'],
-    'swimming_pool':            ['recreation'],
+    'swimming_pool':            ['recreation','swimming'],
     'track':                    ['recreation'],
-    'water_park':               ['entertainment'],
+    'water_park':               ['entertainment','park','place_water'],
 
     'hackerspace':              ['education','entertainment'],
   },
@@ -281,47 +281,47 @@ const mapping = {
 
   'public_transport': {
     '*':                        ['transport','transport:public'],
-    'station':                  ['transport','transport:station']
+    'station':                  ['transport','transport:station','station','public_transport_station']
   },
 
   'railway': {
-    'light_rail':               ['transport','transport:rail'],
-    'subway':                   ['transport','transport:rail'],
-    'tram':                     ['transport','transport:rail'],
-    'station':                  ['transport','transport:rail','transport:station']
+    'light_rail':               ['transport','transport:rail','public_transport_station'],
+    'subway':                   ['transport','transport:rail','subway','public_transport_station'],
+    'tram':                     ['transport','transport:rail','tram_stop','public_transport_station'],
+    'station':                  ['transport','transport:rail','transport:station','station','public_transport_station']
   },
 
   'shop': {
     '*':                        ['retail'],
-    'bakery':                   ['food'],
-    'butcher':                  ['food'],
+    'bakery':                   ['food','shop_bakery'],
+    'butcher':                  ['food','shop_butcher'],
     'cheese':                   ['food'],
     'chocolate':                ['food'],
     'coffee':                   ['food'],
     'deli':                     ['food'],
-    'greengrocer':              ['food'],
-    'seafood':                  ['food'],
-    'supermarket':              ['food'],
+    'greengrocer':              ['food','organic_store','shop_greengrocer'],
+    'seafood':                  ['food','shop_seafood'],
+    'supermarket':              ['food','supermarket','shop_supermarket'],
 
-    'tailor':                   ['professional'],
+    'tailor':                   ['professional','shop_shoes'],
     'copyshop':                 ['professional'],
     'dry_cleaning':             ['professional'],
 
     'chemist':                  ['health'],
-    'medical_supply':           ['health'],
-    'optician':                 ['health']
+    'medical_supply':           ['health','shop_medical_supply'],
+    'optician':                 ['health','optician']
   },
 
   'sport': {
     '*':                        ['recreation'],
-    'american_football':        ['entertainment'],
-    'australian_football':      ['entertainment'],
-    'badminton':                ['entertainment'],
-    'baseball':                 ['entertainment'],
-    'basketball':               ['entertainment'],
-    'beachvolleyball':          ['entertainment'],
+    'american_football':        ['entertainment','football_pitch'],
+    'australian_football':      ['entertainment','football_pitch'],
+    'badminton':                ['entertainment','sport_badminton'],
+    'baseball':                 ['entertainment','sport_baseball'],
+    'basketball':               ['entertainment','basketball_pitch'],
+    'beachvolleyball':          ['entertainment','sport_beach_volley_ball','sport_volleyball'],
     'billiards':                ['entertainment'],
-    'canadian_football':        ['entertainment'],
+    'canadian_football':        ['entertainment','football_pitch'],
     'chess':                    ['entertainment'],
     'cricket':                  ['entertainment'],
     'dog_racing':               ['entertainment'],
@@ -329,28 +329,28 @@ const mapping = {
     'gaelic_games':             ['entertainment'],
     'horse_racing':             ['entertainment'],
     'ice_hockey':               ['entertainment'],
-    'karting':                  ['entertainment'],
-    'rc_car':                   ['entertainment'],
-    'rugby_league':             ['entertainment'],
-    'rugby_union':              ['entertainment'],
+    'karting':                  ['entertainment','sport_karting'],
+    'rc_car':                   ['entertainment','shop_car'],
+    'rugby_league':             ['entertainment','rugby_pitch'],
+    'rugby_union':              ['entertainment','rugby_pitch'],
     'safety_training':          ['education']
   },
 
   'tourism': {
-    'hotel':                    ['accommodation'],
+    'hotel':                    ['accommodation','hotel'],
     'motel':                    ['accommodation'],
     'alpine_hut':               ['accommodation'],
     'apartment':                ['accommodation'],
     'guest_house':              ['accommodation'],
     'chalet':                   ['accommodation'],
     'caravan_site':             ['accommodation'],
-    'camp_site':                ['accommodation'],
+    'camp_site':                ['accommodation','camp_site'],
     'wilderness_hut':           ['accommodation'],
     'information':              ['government'],
-    'attraction':               ['entertainment'],
-    'theme_park':               ['entertainment'],
-    'viewpoint':                ['recreation'],
-    'museum':                   ['education','entertainment'],
+    'attraction':               ['entertainment','attraction'],
+    'theme_park':               ['entertainment','park'],
+    'viewpoint':                ['recreation','viewpoint'],
+    'museum':                   ['education','entertainment','museum'],
     'gallery':                  ['education','entertainment'],
     'zoo':                      ['education','entertainment']
   }

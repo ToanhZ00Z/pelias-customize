@@ -1,52 +1,53 @@
 version: '3'
 services:
-  api:
-    build:
-      context: ./api
-      dockerfile: ./Dockerfile
-    image: api-service-customize:latest
-  geonames:
-    build:
-      context: ./geonames
-      dockerfile: ./Dockerfile
-    image: geonames-service-customize
-  interpolation:
-    build:
-      context: ./interpolation
-      dockerfile: ./Dockerfile
-    image: interpolation-service-customize
-  openaddresses: 
-    build:
-      context: ./openaddresses
-      dockerfile: ./Dockerfile
-    image: openaddresses-service-customize
+  # api:
+  #   build:
+  #     context: ./api
+  #     dockerfile: ./Dockerfile
+  #   image: api-service-customize:latest
+  # geonames:
+  #   build:
+  #     context: ./geonames
+  #     dockerfile: ./Dockerfile
+  #   image: geonames-service-customize
+  # interpolation:
+  #   build:
+  #     context: ./interpolation
+  #     dockerfile: ./Dockerfile
+  #   image: interpolation-service-customize
+  # openaddresses: 
+  #   build:
+  #     context: ./openaddresses
+  #     dockerfile: ./Dockerfile
+  #   image: openaddresses-service-customize
   openstreetmap:
     build:
       context: ./openstreetmap
       dockerfile: ./Dockerfile
-    image: openstreetmap-service-customize
-  pip: 
-    build:
-      context: ./pip-service
-      dockerfile: ./Dockerfile
-    image: pip-service-customize
-  placeholder:
-    build:
-      context: ./placeholder
-      dockerfile: ./Dockerfile
-    image: placeholder-service-customize
-  polylines:
-    build:
-      context: ./polylines
-      dockerfile: ./Dockerfile
-    image: polylines-service-customize
-  schema:
-    build:
-      context: ./schema
-      dockerfile: ./Dockerfile
-    image: schema-service-customize
-  whosonfirst:
-    build:
-      context: ./whosonfirst
-      dockerfile: ./Dockerfile
-    image: whosonfirst-service-customize
+    container_name: pelias_openstreetmap_customize
+    image: openstreetmap-service-customize:latest
+  # pip: 
+  #   build:
+  #     context: ./pip-service
+  #     dockerfile: ./Dockerfile
+  #   image: pip-service-customize
+  # placeholder:
+  #   build:
+  #     context: ./placeholder
+  #     dockerfile: ./Dockerfile
+  #   image: placeholder-service-customize
+  # polylines:
+  #   build:
+  #     context: ./polylines
+  #     dockerfile: ./Dockerfile
+  #   image: polylines-service-customize
+  # schema:
+  #   build:
+  #     context: ./schema
+  #     dockerfile: ./Dockerfile
+  #   image: schema-service-customize
+  # whosonfirst:
+  #   build:
+  #     context: ./whosonfirst
+  #     dockerfile: ./Dockerfile
+  #   image: whosonfirst-service-customize

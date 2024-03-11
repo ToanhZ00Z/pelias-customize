@@ -45,7 +45,7 @@ services:
       - "./blacklist/:/data/blacklist"
   openstreetmap:
     image: pelias/openstreetmap:master
-    container_name: pelias_openstreetmap
+    container_name: pelias_openstreetmap_customize
     user: "${DOCKER_USER}"
     volumes:
       - "./pelias.json:/code/pelias.json"
